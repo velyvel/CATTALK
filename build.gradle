@@ -24,12 +24,34 @@ repositories {
 }
 
 dependencies {
+
+    // 롬복 및 기타 스프링 설정
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    //connector j
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    //jpa
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // QueryDSL configuration
+    implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
+    annotationProcessor 'com.querydsl:querydsl-apt:5.0.0:jakarta'
+    annotationProcessor 'jakarta.annotation:jakarta.annotation-api'
+    annotationProcessor 'jakarta.persistence:jakarta.persistence-api'
+
+    // API 결과값 보는 페이지 (swagger)
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+    runtimeOnly 'com.github.therapi:therapi-runtime-javadoc:0.15.0'
+    annotationProcessor 'com.github.therapi:therapi-runtime-javadoc-scribe:0.15.0'
+
+
+
 }
 
 tasks.named('test') {
