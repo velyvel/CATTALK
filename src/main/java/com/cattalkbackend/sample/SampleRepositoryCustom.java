@@ -1,5 +1,5 @@
 package com.cattalkbackend.sample;
 
-public class SampleRepositoryImpl {
+public interface SampleRepositoryCustom {
 
 }

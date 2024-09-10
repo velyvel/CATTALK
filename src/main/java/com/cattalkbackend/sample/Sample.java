@@ -2,6 +2,8 @@ package com.cattalkbackend.sample;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
@@ -18,9 +20,11 @@ import lombok.experimental.SuperBuilder;
 @Data
 @Accessors(chain = true)
 @Table(name = "sample")
-public class SampleEntity {
+public class Sample {
 
   @Id
+  //id에 generatedValue 없으면 저장 안된다잉
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   @Column(name = "code")

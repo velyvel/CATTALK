@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Schema(description = "테스트용 DTO")
-public class ResponseDto {
+public class RequestDto {
 
   @Schema(description = "테스트 코드, Long", example = "0000")
   private Long code;

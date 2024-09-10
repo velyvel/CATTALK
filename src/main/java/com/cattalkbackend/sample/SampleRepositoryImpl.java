@@ -1,5 +1,10 @@
 package com.cattalkbackend.sample;
 
-public class SampleRepository {
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@RequiredArgsConstructor
+public class SampleRepositoryImpl implements SampleRepositoryCustom {
 
 }
